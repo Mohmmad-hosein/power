@@ -1,10 +1,10 @@
 "use client"
 
 import { useRouter } from "next/router";
-import BasketPic from "../../../assets/landing/header/basket.png";
-import FavoritePic from "../../../assets/landing/header/favorite.png";
-import SearchPic from "../../../assets/landing/header/search.png";
-import CategoryPic from "../../../assets/landing/header/category.png";
+import BasketPic from "@/assets/landing/header/basket.png";
+import FavoritePic from "@/assets/landing/header/favorite.png";
+import SearchPic from "@/assets/landing/header/search.png";
+import CategoryPic from "@/assets/landing/header/category.png";
 import Image from "next/image";
 import { Link, useLocation } from "react-router-dom";
 

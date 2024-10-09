@@ -15,7 +15,7 @@ import Govahi from "@/assets/landing/body/SVG (2).png";
 import Email from "@/assets/landing/body/SVG (3).png";
 import DanshghoShavid from "@/assets/landing/body/Untitled-2.png";
 import MorabiShavid from "@/assets/landing/body/Untitled-1(1).png";
-import SoalatPic from "@/assets/landing/body/div.faq__img.png";
+import  SoalatPic from "@/assets/landing/body/div.faq__img.png";
 import {
   GetLandingApi,
   GetNewsForLanding,
@@ -28,7 +28,6 @@ export const Body = () => {
   const [LandingApi, setLandingApi] = useState([]);
   const [topCourseState, setTopCourseState] = useState([]);
   const [newsList, setNewsList] = useState([]);
-  const [selectedRadio, setSelectedRadio] = useState("");
 
   // GetLandingReportApi
   useEffect(() => {
@@ -51,10 +50,6 @@ export const Body = () => {
     fetchTopCourseData();
     fetchData();
   }, []);
-
-  const handleRadioChange = (event) => {
-    setSelectedRadio(event.target.value);
-  };
 
   return (
     <>
@@ -280,68 +275,14 @@ export const Body = () => {
         </div>
       </div>
       <div className="bg-[#F7F7F9] w-full h-[850px] flex justify-center items-center gap-40">
-        <Image className="w-[450px] h-[560px]" src={SoalatPic} alt="" />
-        <div className="w-[550px] h-auto ">
-          <h2 className="bg-[#EFEEFE] w-[130px] content-center text-center h-[30px] rounded-[30px] text-[#5751E1] font-medium">
-            {" "}
-            سولات متداول{" "}
-          </h2>
-          <h1 className="w-[370px] mt-3 h-[95px] text-[#161439] leading-[48px] text-[36px] font-semibold">
-            {" "}
-            شروع به تمرین از مربیان حرفه ای جهان{" "}
-          </h1>
-          <p className="w-[500px] text-[#6D6C80] mt-2">
-            صندوق ورودی مشترک بصری Groove این کار را برای اعضای تیم آسان می کند
-            سازماندهی، اولویت بندی و.در این قسمت.
-          </p>
-          <div className="mt-32 w-full h-auto flex justify-center flex-col items-center gap-5">
-            <div className="flex gap-8">
-              <label>
-                <input
-                  type="radio"
-                  value="Option 1"
-                  checked={selectedRadio === "Option 1"}
-                  onChange={handleRadioChange}
-                />
-                نامبر وان می خواهد به شما چه چیزی دهد؟
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  value="Option 2"
-                  checked={selectedRadio === "Option 2"}
-                  onChange={handleRadioChange}
-                />
-                چرا ما را برای تحصیل خود انتخاب کنید؟
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  value="Option 3"
-                  checked={selectedRadio === "Option 3"}
-                  onChange={handleRadioChange}
-                />
-                چگونه خدماتی را برای شما ارائه می کنیم؟
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  value="Option 4"
-                  checked={selectedRadio === "Option 4"}
-                  onChange={handleRadioChange}
-                />
-                آیا برای دوره خود مقرون به صرفه هستید؟
-              </label>
-            </div>
-            {selectedRadio && (
-              <div className="mt-4 text-[#6D6C80] font-normal">
-                <p>
-                  {`صندوق ورودی مشترک بصری Groove سازماندهی اعضای تیم را آسان می کند در این قسمت نه تنها پنج قرن زنده ماند چاپگر ناشناخته یک گالری از نوع و درهم گرفت.`}
-                </p>
-              </div>
-            )}
-          </div>
-        </div>
+                  <Image className="w-[450px] h-[560px]" src={SoalatPic} alt="" />
+                  <div className="w-[550px] h-auto ">
+                          <h2 className="bg-[#EFEEFE] w-[130px] content-center text-center h-[30px] rounded-[30px] text-[#5751E1] font-medium"> سولات متداول </h2>
+                          <h1 className="w-[370px] mt-3 h-[95px] text-[#161439] leading-[48px] text-[36px] font-semibold"> شروع به تمرین از مربیان حرفه ای جهان </h1>
+                          <p className="w-[500px] text-[#6D6C80] mt-2">صندوق ورودی مشترک بصری Groove این کار را برای اعضای تیم آسان می کند
+                          سازماندهی، اولویت بندی و.در این قسمت.</p>
+                  </div>
+
       </div>
       <div className=" h-[1050px] w-full bg-[#282568] flex flex-wrap text-center justify-center items-center">
         <div className="w-[1440px] h-[445px] flex justify-center items-center flex-wrap">

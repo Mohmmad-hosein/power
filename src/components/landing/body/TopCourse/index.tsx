@@ -2,16 +2,16 @@
 
 import React from "react";
 import Image from "next/image";
-import DefualtPic from "../../../../assets/landing/course/defualtPic.png";
-import StarPic from "../../../../assets/landing/course/star.svg";
-import TypeCoursePic from "../../../../assets/landing/course/level 1.png";
-import StudentPic from "../../../../assets/landing/course/Students 1.png";
-import TeacherPic from "../../../../assets/landing/course/coch 1.png";
-import LikePic from "../../../../assets/landing/course/like.png";
-import DisLikePic from "../../../../assets/landing/course/dislike.png";
-import CalenderPic from "../../../../assets/landing/course/calender.svg";
-import FavoritePic from "../../../../assets/landing/course/favorite.png";
-import FavotiteTruePic from "../../../../assets/landing/course/favorite-true.png";
+import DefualtPic from "@/assets/landing/course/defualtPic.png";
+import StarPic from "@/assets/landing/course/star.svg";
+import TypeCoursePic from "@/assets/landing/course/level 1.png";
+import StudentPic from "@/assets/landing/course/Students 1.png";
+import TeacherPic from "@/assets/landing/course/coch 1.png";
+import LikePic from "@/assets/landing/course/like.png";
+import DisLikePic from "@/assets/landing/course/dislike.png";
+import CalenderPic from "@/assets/landing/course/calender.svg";
+import FavoritePic from "@/assets/landing/course/favorite.png";
+import FavotiteTruePic from "@/assets/landing/course/favorite-true.png";
 import { DateConvert } from "@/core/services/utils/date";
 import { AddCourseFavoriteApi } from "@/core/services/api/landing";
 import toast from "react-hot-toast";
@@ -75,7 +75,7 @@ export const TopCourse: React.FC<TopCourseProps> = ({
         height={190}
         className="rounded-xl h-[190px]  w-[300px]"
       />
-      <div className=" absolute w-9 h-9 flex justify-center items-center cursor-pointer bg-white left-9 top-10 rounded-md" >
+      <div className=" absolute w-9 h-9 flex justify-center items-center cursor-pointer bg-white left-9 top-10 rounded-md" onClick={() => AddCourseFavoriteApi()} >
                 <Image src={isUserFavorite? FavotiteTruePic : FavoritePic } alt="" />
       </div>
       <div className="p-4 w-[95%]">
